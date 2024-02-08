@@ -11,7 +11,6 @@ public class FilmesRepository {
     private static List<Filme> filmes = new ArrayList<>();
 
     private FilmesRepository(){
-
     }
 
     static private int contador = 0;
