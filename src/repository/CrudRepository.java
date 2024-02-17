@@ -9,6 +9,6 @@ public interface CrudRepository<T> {
     public List<T> pesquisar(Predicate<T> predicate);
     public  List<T> todos();
 
-    public void ecluir(T entry);
+    public void excluir(T entry);
 
 }
