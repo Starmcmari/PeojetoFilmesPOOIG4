@@ -1,12 +1,13 @@
 package repository;
 
-import Model.Filme;
+import model.Filme;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class FilmesRepository {
+public class FilmesRepository implements FilmeRepository {
     private static List<Filme> filmes = new ArrayList<>();
 
     private FilmesRepository(){
@@ -39,4 +40,28 @@ public class FilmesRepository {
         return filmes1;
     }
 
+    @Override
+    public Filme inserir(Filme entry) {
+        return null;
+    }
+
+    @Override
+    public Filme atualizar(Filme entry) {
+        return null;
+    }
+
+    @Override
+    public List<Filme> pesquisar(Predicate<Filme> predicate) {
+        return null;
+    }
+
+    @Override
+    public List<Filme> todos() {
+        return null;
+    }
+
+    @Override
+    public void excluir(Filme entry) {
+
+    }
 }
