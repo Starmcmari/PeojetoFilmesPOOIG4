@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class FilmesRepository implements FilmeRepository {
+public class FilmesRepository implements FilmeAcoes {
     private static List<Filme> filmes = new ArrayList<>();
 
     private FilmesRepository(){
