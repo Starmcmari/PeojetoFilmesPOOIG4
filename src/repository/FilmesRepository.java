@@ -40,28 +40,50 @@ public class FilmesRepository implements FilmeRepository {
         return filmes1;
     }
 
+
+
     @Override
     public Filme inserir(Filme entry) {
-        return null;
+        filmes.add(entry);
+
+        return entry;
     }
 
     @Override
     public Filme atualizar(Filme entry) {
+
+        if (filmes.contains((entry))){
+
+            filmes.set(filmes.indexOf(entry), entry);
+
+            return entry;
+        }
         return null;
     }
 
     @Override
     public List<Filme> pesquisar(Predicate<Filme> predicate) {
-        return null;
+
+        List<Filme> resultado = new ArrayList<>();
+
+        for (Filme filme : filmes) {
+
+            if (predicate.test(filme)){
+                resultado.add(filme);
+            }
+        }
+        return resultado;
     }
 
     @Override
     public List<Filme> todos() {
-        return null;
+
+        return filmes;
     }
 
     @Override
     public void excluir(Filme entry) {
 
+        filmes.remove(entry);
     }
 }

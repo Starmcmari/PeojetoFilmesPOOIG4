@@ -1,8 +1,8 @@
 package model;
 
 public class Filme {
-    private int id;
-    private String nome;
+    public int id;
+    public String nome;
     private String diretor;
 
     public Filme(int id, String nome, String diretor) {
