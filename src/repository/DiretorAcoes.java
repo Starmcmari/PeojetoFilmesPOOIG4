@@ -1,18 +1,7 @@
 package repository;
 
-import java.util.List;
-import java.util.function.Predicate;
+import model.Diretor;
 
-public interface DiretorAcoes<T> {
-
-    public T inserir(T entry);
-
-    public T atualizar(T entry);
-
-    public List<T> pesquisar(Predicate<T> predicate);
-
-    public void excluir(T entry);
-
-    public List<T> todos();
+public interface DiretorAcoes extends CrudRepository<Diretor> {
 
 }
