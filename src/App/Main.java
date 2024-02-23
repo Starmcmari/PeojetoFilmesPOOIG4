@@ -11,25 +11,19 @@ public class Main {
         try {
             Scanner scanner = new Scanner(System.in);
 
-            // Cadastro de ator
             System.out.println("Cadastro de Ator:");
             Ator ator = cadastrarAtor(scanner);
 
-            // Cadastro de diretor
             System.out.println("\nCadastro de Diretor:");
             Diretor diretor = cadastrarDiretor(scanner);
 
-            // Cadastro de filme
             System.out.println("\nCadastro de Filme:");
             Filme filme = cadastrarFilme(scanner, diretor.getNome());
 
-            // Imprimindo informações do ator
             imprimirInformacoesAtor(ator);
 
-            // Imprimindo informações do diretor
             imprimirInformacoesDiretor(diretor);
 
-            // Imprimindo informações do filme
             imprimirInformacoesFilme(filme);
 
             scanner.close();
@@ -41,7 +35,7 @@ public class Main {
     private static Ator cadastrarAtor(Scanner scanner) {
         System.out.print("ID do Ator: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
+        scanner.nextLine();
 
         System.out.print("Nome do Ator: ");
         String nome = scanner.nextLine();
@@ -51,7 +45,7 @@ public class Main {
 
         System.out.print("Idade do Ator: ");
         int idade = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
+        scanner.nextLine();
 
         System.out.print("Sexo do Ator: ");
         String sexo = scanner.nextLine();
@@ -68,7 +62,7 @@ public class Main {
     private static Diretor cadastrarDiretor(Scanner scanner) {
         System.out.print("ID do Diretor: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
+        scanner.nextLine();
 
         System.out.print("Nome do Diretor: ");
         String nome = scanner.nextLine();
@@ -78,7 +72,7 @@ public class Main {
 
         System.out.print("Idade do Diretor: ");
         int idade = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
+        scanner.nextLine();
 
         System.out.print("Sexo do Diretor: ");
         String sexo = scanner.nextLine();
@@ -95,7 +89,7 @@ public class Main {
     private static Filme cadastrarFilme(Scanner scanner, String diretor) {
         System.out.print("ID do Filme: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Consumir quebra de linha
+        scanner.nextLine();
 
         System.out.print("Nome do Filme: ");
         String nome = scanner.nextLine();
